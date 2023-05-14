@@ -96,6 +96,6 @@ updates:
 
 ---
 
-The dependabot.yml file needs to be placed in the .github directory of your repository in order for Dependabot to recognize and use the configuration. The .github directory is a standard location for storing various configuration files related to GitHub workflows and integrations.
+The `dependabot.yml` file needs to be placed in the `.github` directory of your repository in order for Dependabot to recognize and use the configuration. The `.github` directory is a standard location for storing various configuration files related to GitHub workflows and integrations.
 
-By placing the dependabot.yml file in the .github directory, Dependabot will automatically detect and apply the specified configuration settings when scanning your repository for dependency updates. This includes information such as the package managers to be monitored, update policies, version constraints, and any additional customization specific to your project's dependency management.
+By placing the `dependabot.yml` file in the .github directory, Dependabot will automatically detect and apply the specified configuration settings when scanning your repository for dependency updates. This includes information such as the package managers to be monitored, update policies, version constraints, and any additional customization specific to your project's dependency management.
