@@ -68,3 +68,34 @@ If you are stuck with a step in the exercise or the grading workflow does not au
 The troubleshooter will either display useful information to help you understand what you might have done wrong in your exercise or redirect you to the documentation relevant to your exercise to help you out.
 
 See [Running a workflow on GitHub](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow) if you need assistance.
+
+---
+
+```yml
+# Basic dependabot.yml file with
+# minimum configuration for two package managers
+
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    # Look for `package.json` and `lock` files in the `root` directory
+    directory: "/"
+    # Check the npm registry for updates every day (weekdays)
+    schedule:
+      interval: "daily"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+```
+
+---
+
+The dependabot.yml file needs to be placed in the .github directory of your repository in order for Dependabot to recognize and use the configuration. The .github directory is a standard location for storing various configuration files related to GitHub workflows and integrations.
+
+By placing the dependabot.yml file in the .github directory, Dependabot will automatically detect and apply the specified configuration settings when scanning your repository for dependency updates. This includes information such as the package managers to be monitored, update policies, version constraints, and any additional customization specific to your project's dependency management.
